@@ -128,7 +128,7 @@ body {
 .tagline {
   width: clamp(160px, 42vw, 230px);
   height: auto;
-  margin-top: clamp(-1.6rem, -3vw, -1rem);
+  margin-top: clamp(0.4rem, 2.5vw, 1.1rem);
 }
 
 /* Video (post-countdown) */
