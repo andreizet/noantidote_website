@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NO ANTIDOTE</title>
+  <meta name="description" content="NO ANTIDOTE — official website. New release incoming." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="NO ANTIDOTE" />
+  <meta property="og:description" content="New release incoming." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/background.jpg" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Fixed parallax background layers -->
+  <div class="bg-layer bg-image" aria-hidden="true"></div>
+  <div class="bg-layer bg-vignette" aria-hidden="true"></div>
+
+  <main>
+    <!-- 1. HERO / COUNTDOWN -->
+    <section class="section hero" id="hero">
+      <div class="hero-inner parallax" data-speed="0.05">
+        <img class="logo" src="assets/logo-white.svg" alt="NO ANTIDOTE" />
+
+        <!-- Countdown (hidden & replaced by video once it hits zero) -->
+        <div class="countdown" id="countdown" aria-live="polite">
+          <div class="cd-unit"><span class="cd-num" id="cd-days">00</span><span class="cd-label">Days</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit"><span class="cd-num" id="cd-hours">00</span><span class="cd-label">Hours</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit"><span class="cd-num" id="cd-mins">00</span><span class="cd-label">Minutes</span></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit"><span class="cd-num" id="cd-secs">00</span><span class="cd-label">Seconds</span></div>
+        </div>
+
+        <!-- Tagline under the countdown -->
+        <img class="tagline" src="assets/vezi_ce_spui.svg" alt="Vezi ce spui" />
+
+        <!-- Video (revealed once countdown finishes) -->
+        <div class="video-wrap" id="video-wrap" hidden>
+          <div class="video-frame" id="video-frame"><!-- iframe injected by script.js --></div>
+        </div>
+      </div>
+
+      <a class="scroll-hint" href="#listen" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- 2. LISTEN / STREAMING -->
+    <section class="section listen" id="listen">
+      <div class="content parallax" data-speed="0.05">
+        <h2 class="section-title">Listen</h2>
+        <ul class="streaming" id="streaming"><!-- links injected by script.js --></ul>
+      </div>
+    </section>
+
+    <!-- 3. SOCIAL -->
+    <section class="section social" id="social-section">
+      <div class="content parallax" data-speed="0.05">
+        <h2 class="section-title">Follow</h2>
+        <ul class="social-list" id="social"><!-- links injected by script.js --></ul>
+      </div>
+    </section>
+
+    <!-- 4. BOOKING -->
+    <section class="section booking" id="booking">
+      <div class="content parallax" data-speed="0.05">
+        <h2 class="section-title">Booking</h2>
+        <div class="contact">
+          <a class="contact-link" id="phone-link" href="#">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+              <path fill="currentColor" d="M6.62 10.79a15.53 15.53 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2Z"/>
+            </svg>
+            <span id="phone-text">+40 770 319 277</span>
+          </a>
+          <a class="contact-link" id="email-link" href="#">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+              <path fill="currentColor" d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 2v.4l8 5 8-5V6H4Zm16 2.8-7.47 4.67a1 1 0 0 1-1.06 0L4 8.8V18h16V8.8Z"/>
+            </svg>
+            <span id="email-text">noantidoteofficial@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <img class="footer-logo" src="assets/logo-white.svg" alt="NO ANTIDOTE" />
+      <p>&copy; <span id="year"></span> NO ANTIDOTE</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
