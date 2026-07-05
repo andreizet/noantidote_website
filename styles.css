@@ -9,6 +9,10 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* Ensure the `hidden` attribute always hides, even on elements that set
+   their own display (e.g. the countdown uses display:flex). */
+[hidden] { display: none !important; }
+
 /* The band name is the <h1> for SEO; this wrapper stays out of the layout
    so the logo renders exactly as a plain image would. */
 .logo-heading { display: contents; }

@@ -10,7 +10,7 @@ const CONFIG = {
 
   // YouTube video shown once the countdown reaches zero.
   // Use the 11-character video ID (from https://youtu.be/VIDEO_ID).
-  youtubeId: "VIDEO_ID",
+  youtubeId: "4hIQT6OTzWY",
 
   // Booking contact.
   phoneDisplay: "+40 770 319 277",
@@ -86,7 +86,10 @@ const LABELS = {
   const pad = (n) => String(n).padStart(2, "0");
 
   function showVideo() {
+    // Once the release lands, leave just the logo with the video below it.
     countdown.hidden = true;
+    const tagline = document.querySelector(".tagline");
+    if (tagline) tagline.hidden = true;
     const frame = document.getElementById("video-frame");
     frame.innerHTML =
       `<iframe src="https://www.youtube-nocookie.com/embed/${CONFIG.youtubeId}?rel=0" ` +

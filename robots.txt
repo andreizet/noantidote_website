@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://andreizet.github.io/noantidote_website/sitemap.xml
+Sitemap: https://noantidote.ro/sitemap.xml
