@@ -1,0 +1,49 @@
+name: Deploy to GitHub Pages
+
+# Deploy on every push to main, or manually from the Actions tab.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Permissions the deploy needs.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one deploy at a time; a newer push cancels an in-flight run.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Assemble site
+        # Copy only the files the site actually needs into _site/,
+        # so git history, tooling, and unused source files aren't published.
+        run: |
+          mkdir _site
+          cp index.html styles.css script.js _site/
+          cp -r assets _site/assets
+          rm -f _site/assets/background.png   # original source; the site uses the .jpg versions
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
