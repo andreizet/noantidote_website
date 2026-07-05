@@ -6,7 +6,7 @@ const CONFIG = {
   // Release moment. Defined in Bucharest time (EEST, UTC+3 in July).
   // The countdown targets this exact instant, so a visitor in the UK
   // (or anywhere) sees the correct remaining time to Bucharest's clock.
-  releaseISO: "2026-07-09T20:00:00+03:00",
+  releaseISO: "2026-07-09T18:00:00+03:00",
 
   // YouTube video shown once the countdown reaches zero.
   // Use the 11-character video ID (from https://youtu.be/VIDEO_ID).
