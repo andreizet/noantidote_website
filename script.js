@@ -10,7 +10,7 @@ const CONFIG = {
 
   // YouTube video shown once the countdown reaches zero.
   // Use the 11-character video ID (from https://youtu.be/VIDEO_ID).
-  youtubeId: "4hIQT6OTzWY",
+  youtubeId: "pTZQieV2Yaw",
 
   // Booking contact.
   phoneDisplay: "+40 770 319 277",
