@@ -32,7 +32,7 @@ jobs:
         # so git history, tooling, and unused source files aren't published.
         run: |
           mkdir _site
-          cp index.html styles.css script.js _site/
+          cp index.html styles.css script.js robots.txt sitemap.xml _site/
           cp -r assets _site/assets
           rm -f _site/assets/background.png   # original source; the site uses the .jpg versions
 
